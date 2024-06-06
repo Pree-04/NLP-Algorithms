@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action=""></form>
+    <div class="container">
+        <h1>Language Detector</h1>
+        <textarea id="inputText" placeholder="Type a sentence in any language..."></textarea>
+        <button onclick="detectLanguage()">Detect Language</button>
+        <p id="output"></p>
+    </div>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Language Detection</h1>
+    <form action="/predict" method="post">
+        <textarea name="text" rows="4" cols="50" placeholder="Enter text..."></textarea><br><br>
+        <input type="submit" value="Detect Language">
+    </form>
+    {% if language %}
+        <h2>Detected Language: {{ language }}</h2>
+    {% endif %}
+</body>
+</html>
